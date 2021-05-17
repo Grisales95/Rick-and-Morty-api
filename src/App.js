@@ -24,7 +24,7 @@ function App() {
   }, [url,location])
   return (
     <div className="App">
-      <SearchBox handleSearch = {location} />
+      <SearchBox handleSearch = {setLocation} />
       <div>
         {urls ? (
           urls.map((url) => (
