@@ -23,10 +23,10 @@ const LocationInfo = ({url}) => {
         </div>
         <div className="col-md-8">
           <div className="card-body">
-            <h4 className="card-title">{resident.name}</h4>
-            <p className="card-tex">{resident.species}</p>
-            <p className="card-tex">{resident.status}</p>
-            <p className="card-tex">{resident.origin.name}</p>
+            <h4 className="card-title">Name: {resident.name}</h4>
+            <p className="card-tex">Specie: {resident.species}</p>
+            <p className="card-tex">Status: {resident.status}</p>
+            <p className="card-tex">Origin: {resident.origin.name}</p>
             <p className="card-tex">Number of episodes: {resident.episode.length}</p>
           </div>
         </div>
