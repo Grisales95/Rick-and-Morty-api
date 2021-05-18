@@ -5,7 +5,7 @@ const SearchBox = ({handleSearch}) =>{
   const [value, setValue] = useState(1)
   return(
     <div>
-      <select onChange={e=>setValue(e.target.value)}>
+      <select  className="form-control" onChange={e=>setValue(e.target.value)}>
         <option value="1">Earth</option>
         <option value="2">Abadango</option>
         <option value="3">Citadel of Ricks</option>
@@ -21,8 +21,8 @@ const SearchBox = ({handleSearch}) =>{
         <option value="14">Giant's Town</option>
         <option value="16">St. Gloopy Noops Hospital</option>
       </select>
-      <div>
-        <button onClick={()=>handleSearch(value)}>Search</button>
+      <div className="my-3">
+        <button className="btn btn-dark"onClick={()=>handleSearch(value)}>Search</button>
       </div>
     </div>
   )
