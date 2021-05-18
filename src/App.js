@@ -5,7 +5,6 @@ import {useState} from "react"
 import LocationInfo from "./LocationInfo"
 import title from "./img/title.png"
 import rick from "./img/rick.gif"
-import intro from "./intro.mp3"
 
 function App() {
   const [location, setLocation] = useState(1)
