@@ -5,6 +5,7 @@ import {useState} from "react"
 import LocationInfo from "./LocationInfo"
 import title from "./img/title.png"
 import rick from "./img/rick.gif"
+import intro from "./intro.mp3"
 
 function App() {
   const [location, setLocation] = useState(1)
@@ -65,8 +66,8 @@ const handleNext4 = () => {
       <h1 className="color-white my-3">Residents</h1>
       <div className="container-residents">
       {urls ? (
-          urls.map((url,index) => (
-            <LocationInfo url={url} key ={index}/>
+          urls.map((url) => (
+            <LocationInfo url={url}/>
           ))
         ) : (
             <h2>Cargando</h2>
