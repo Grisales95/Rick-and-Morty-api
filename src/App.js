@@ -53,9 +53,6 @@ const handleNext4 = () => {
 
   return (
     <div className="container text-center">
-      <div className="repro mt-3">
-      <audio src={intro} autoPlay="autoplay" loop="loop"  controls ></audio>
-      </div>
       <div className="title-logo">
       <img src={title} alt="logo-rick-morty" />
       </div>
