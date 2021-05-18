@@ -29,7 +29,7 @@ function App() {
       }
         getData()
     }  
-  }, [url,location,description,total,A,B,urls])
+  }, [url,location,description,total,A,B])
 
   const handleNext1 = () =>{
     setA(A = 0)
@@ -55,7 +55,7 @@ const handleNext4 = () => {
     <div className="container text-center">
       <div className="repro mt-3">
       <audio src={intro} autoPlay="autoplay" loop="loop"  controls ></audio>
-      </div>
+      </div> 
       <div className="title-logo">
       <img src={title} alt="logo-rick-morty" />
       </div>
@@ -69,8 +69,8 @@ const handleNext4 = () => {
       <h1 className="color-white my-3">Residents</h1>
       <div className="container-residents">
       {urls ? (
-          urls.map((url) => (
-            <LocationInfo url={url}/>
+          urls.map((url,index) => (
+            <LocationInfo url={url} key={index}/>
           ))
         ) : (
             <h2>Cargando</h2>
@@ -84,7 +84,7 @@ const handleNext4 = () => {
         <button className="btn btn-sm btn-dark mx-1" onClick={handleNext4}>4</button>
         </div>
         <div className="container mt-3 gif">
-          <img src={rick} alt="portal"/>
+          {<img src={rick} alt="portal"/>}
         </div>
     </div>
   );
