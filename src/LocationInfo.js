@@ -16,13 +16,13 @@ const LocationInfo = ({url}) => {
 
   if(!resident) return null;
   return(
-    <div className="card mb-3 mx-3" style={{maxWidth:400}}>
+    <div className="card mb-3 mx-3" style={{maxWidth:430}}>
       <div className="row g-0">
         <div className="col-md-4">
           <img src={resident.image} alt="rick and morty"/>
         </div>
         <div className="col-md-8">
-          <div className="card-body">
+          <div className="card-body text-start">
             <h4 className="card-title">Name: {resident.name}</h4>
             <p className="card-tex">Specie: {resident.species}</p>
             <p className="card-tex">Status: {resident.status}</p>

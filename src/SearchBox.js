@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from "react"
 
-const SearchBox = ({handleSearch}) =>{
+const SearchBox = ({handleSearch, handleNext1}) =>{
   const [value, setValue] = useState(1)
   return(
     <div>
@@ -22,7 +22,7 @@ const SearchBox = ({handleSearch}) =>{
         <option value="16">St. Gloopy Noops Hospital</option>
       </select>
       <div className="my-3">
-        <button className="btn btn-dark"onClick={()=>handleSearch(value)}>Search</button>
+        <button className="btn btn-dark"onClick={()=>handleSearch(value)-handleNext1()}>Search</button>
       </div>
     </div>
   )

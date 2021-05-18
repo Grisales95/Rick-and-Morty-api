@@ -8,7 +8,8 @@ import rick from "./img/rick.gif"
 import intro from "./intro.mp3"
 
 function App() {
-  const [location, setLocation] = useState(1)
+  const number = Math.round(Math.random()*10);
+  const [location, setLocation] = useState(number)
   const url = `https://rickandmortyapi.com/api/location/${location}`
 
   const [urls, setUrls] = useState()
@@ -39,16 +40,28 @@ function App() {
   const handleNext2 = () =>{
     setA(A = 10)
     setB(B = 20)
+    if(B >= total){
+      alert("There are no more residents!")
+      return handleNext1()
+    }
   }
 
   const handleNext3 = () => {
-    setA(A = 20);
-    setB(B = 30);
+    setA(A = 20)
+    setB(B = 30)
+    if(A >= total){
+      alert("There are no more residents!")
+      return handleNext1()
+    }
 };
 
 const handleNext4 = () => {
+  if(B >= total){
+    alert("There are no more residents!")
+  }else{
   setA(A = 30);
   setB(B = 40);
+  }
 };
 
   return (
@@ -59,7 +72,7 @@ const handleNext4 = () => {
       <div className="title-logo">
       <img src={title} alt="logo-rick-morty" />
       </div>
-      <SearchBox handleSearch = {setLocation} />
+      <SearchBox handleSearch = {setLocation} handleNext1 ={handleNext1}/>
       <div>
       <div className="card py-3">
         <h2>Name: {description?.name}</h2>

@@ -49,8 +49,12 @@ body::after {
   object-fit: cover;
 }
 
+.col-md-4{
+  width: 45%;
+}
+
 .col-md-8{
-width: 60%;
+width: 55%;
 }
 
 .title-logo img{
@@ -69,8 +73,16 @@ width: 60%;
     width: 100%;
   }
 
+  .col-md-4{
+    width: 100%;
+  }
+
   .card{
     width: 100%;
+  }
+
+  .card-body{
+    text-align: center !important;
   }
 
   .gif img{
