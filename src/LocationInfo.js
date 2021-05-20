@@ -12,7 +12,7 @@ const LocationInfo = ({url}) => {
       setResident(data.data)
     };
     getResidents()
-  },[url,resident]);
+  },[url]);
 
   if(!resident) return null;
   return(
